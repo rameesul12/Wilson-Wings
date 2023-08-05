@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "407457402667",
+    "project_id": "flutterauth-7d04a",
+    "storage_bucket": "flutterauth-7d04a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407457402667:android:9a9fe7f7af18a18d097f6e",
+        "android_client_info": {
+          "package_name": "com.example.wilson_wings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407457402667-fa0om1a6200fdjd8tr1h58g3iukb0ksv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9YCF4IOrB3HKtdpyIh7MrxnjTlb8raiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407457402667-fa0om1a6200fdjd8tr1h58g3iukb0ksv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "407457402667-i205jei89lblg7fau0colakv5midj8iv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.wilsonWings.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
