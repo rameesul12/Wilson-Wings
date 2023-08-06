@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wilson_wings/utils/common_Function/get_error.dart';
-import 'package:wilson_wings/view/home_Page/home_page.dart';
+import 'package:wilson_wings/view/home_page/home_page.dart';
 
 class SignUpController extends GetxController{
 

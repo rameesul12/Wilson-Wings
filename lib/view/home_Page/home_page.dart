@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:wilson_wings/utils/colors/colors.dart';
 import 'package:wilson_wings/utils/sized_Box/sized_box.dart';
+import 'package:wilson_wings/view/movie_info/movie_info.dart';
 import 'package:wilson_wings/view_Model/movies_Section.dart/movie_section_controller.dart';
 
 import 'movie_details.dart';
@@ -28,8 +29,8 @@ class HomePage extends StatelessWidget {
               color: textwhite,
             )),
         title: const Text(
-          "Banner Page",
-          style: TextStyle(color: textwhite, fontWeight: FontWeight.bold),
+          "Home Page",
+          style: TextStyle(color: textBlack, fontWeight: FontWeight.bold),
         ),
       ),
       body: Padding(
@@ -40,14 +41,20 @@ class HomePage extends StatelessWidget {
             Expanded(
               child: GetX<MovieSectionController>(
                 builder: (controller) {
-                  return ListView.separated(
+              
+                  return     controller.movies.isEmpty?const Center(child: CircularProgressIndicator(),): ListView.separated(
                       itemBuilder: (context, index) {
-                        return  FilimBanner(
-                         
-                          movieImage:controller.movies[index].backdropPath ,
-                          movieName: controller.movies[index].title,
-                           release_date: "${controller.movies[index].releaseDate}",
-                         
+                        return  InkWell(
+                          onTap: () {
+                            Get.to(()=>MovieInfo(index: index));
+                          },
+                          child: FilimBanner(
+                           
+                            movieImage:controller.movies[index].backdropPath ,
+                            movieName: controller.movies[index].title,
+                             release_date: "${controller.movies[index].releaseDate}",
+                           
+                          ),
                         );
                       },
                       separatorBuilder: (context, index) =>  SizedBox(height: Adaptive.h(4),),
@@ -57,21 +64,7 @@ class HomePage extends StatelessWidget {
             ),
             sizedH40
           ])),
-      floatingActionButton: SizedBox(
-        width: Adaptive.w(90),
-        child: FloatingActionButton(
-          backgroundColor: buttonColor,
-          onPressed: () {
-           log(movieSectionController.movies[0].id.toString());
-          },
-
-          //  backgroundColor:buttonColor ,
-          child: const Text(
-            "Favorite Page",
-            style: TextStyle(color: textwhite),
-          ),
-        ),
-      ),
+      
     );
   }
 }

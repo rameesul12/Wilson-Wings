@@ -42,13 +42,15 @@ class FilimBanner extends StatelessWidget {
                 child: Image.network(
                  'https://www.themoviedb.org/t/p/w300_and_h450_bestv2$movieImage',
                   fit: BoxFit.fill,
-                  frameBuilder:
-                      (context, child, frame, wasSynchronouslyLoaded) => child,
+                 errorBuilder: (context, error, stackTrace) {
+                   return const Text("error occud");
+                 },
+                    
                   loadingBuilder: (context, child, loadingProgress) {
                     if (loadingProgress == null) {
                       return Center(child: child);
                     } else {
-                      return const CircularProgressIndicator(strokeWidth: 1);
+                      return Center(child: const CircularProgressIndicator());
                     }
                   },
                 ),
@@ -67,13 +69,7 @@ class FilimBanner extends StatelessWidget {
                           fontWeight: FontWeight.w900),
                     ),
                   ),
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.favorite,
-                        color: Colors.red,
-                        size: 35,
-                      )),
+                 
                 ],
               ),
               Text(

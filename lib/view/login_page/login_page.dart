@@ -6,7 +6,7 @@ import 'package:wilson_wings/utils/colors/colors.dart';
 import 'package:wilson_wings/utils/common_Function/get_error.dart';
 import 'package:wilson_wings/utils/text_Form_Field/text_form_field.dart';
 import 'package:wilson_wings/view/sign_up/sign_up_page.dart';
-import 'package:wilson_wings/view_Model/login_And_Password/login_view_controller.dart';
+import 'package:wilson_wings/view_Model/login_and_password/login_view_controller.dart';
 import 'package:wilson_wings/view_Model/movies_Section.dart/movie_section_controller.dart';
 
 import '../../utils/sized_Box/sized_box.dart';

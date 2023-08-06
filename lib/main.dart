@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:wilson_wings/view/splash_Screen/splash_screen.dart';
-import 'package:wilson_wings/view_Model/network_Controller/dipendency_injection.dart';
+import 'package:wilson_wings/view_model/network_Controller/dipendency_injection.dart';
 
 import 'firebase_options.dart';
 
