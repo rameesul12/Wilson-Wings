@@ -2,13 +2,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:wilson_wings/view/login_page/login_page.dart';
 import 'package:wilson_wings/view/splash_Screen/splash_screen.dart';
+import 'package:wilson_wings/view_Model/network_Controller/dipendency_injection.dart';
 
 import 'firebase_options.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  DependencyInjection.init();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
 );

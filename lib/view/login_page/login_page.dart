@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:wilson_wings/utils/colors/colors.dart';
-import 'package:wilson_wings/utils/get_error.dart';
+import 'package:wilson_wings/utils/common_Function/get_error.dart';
 import 'package:wilson_wings/utils/text_Form_Field/text_form_field.dart';
 import 'package:wilson_wings/view/sign_up/sign_up_page.dart';
 import 'package:wilson_wings/view_Model/login_And_Password/login_view_controller.dart';
+import 'package:wilson_wings/view_Model/movies_Section.dart/movie_section_controller.dart';
 
 import '../../utils/sized_Box/sized_box.dart';
 
@@ -17,13 +18,14 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
  
  final loginController=Get.put(LoginController());
+ final movieController=Get.put(MovieSectionController());
 
   final TextEditingController emailController=TextEditingController();
   final TextEditingController passwordController=TextEditingController();
   final key=GlobalKey<FormState>();
   
       return Scaffold(
-        appBar: AppBar(title: Center(
+        appBar: AppBar(title:const Center(
           child: Text(
                   'Login',
                   style: TextStyle(color: textBlack, fontSize: 30),
@@ -72,8 +74,10 @@ class LoginPage extends StatelessWidget {
                     return ElevatedButton(
                       onPressed: () async {
                         if (key.currentState!.validate()) {
+                          
                          loginController.signInWithEmailAndPassword(emailController.text, passwordController.text, context);
                        // await provider.loginFunction(provider.userNameController.text.trim(),provider.passWordController.text.trim(), context);
+                       movieController.upcomingMovieGeting(context);
                         }else{
                         getMessage("please fill the Fields", context);
                         }

@@ -5,13 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:wilson_wings/utils/colors/colors.dart';
-import 'package:wilson_wings/utils/common_Function/common_function.dart';
-import 'package:wilson_wings/utils/get_error.dart';
+import 'package:wilson_wings/utils/common_Function/get_error.dart';
 import 'package:wilson_wings/utils/text_Form_Field/text_form_field.dart';
 import 'package:wilson_wings/view/login_page/login_page.dart';
-import 'package:wilson_wings/view_Model/login_And_Password/login_view_controller.dart';
 import 'package:wilson_wings/view_Model/login_And_Password/sign_up_controller.dart';
-
+import '../../utils/common_Function/common_function.dart';
 import '../../utils/sized_Box/sized_box.dart';
 
 class SignUp extends StatelessWidget {
@@ -89,7 +87,6 @@ class SignUp extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10)),
                     backgroundColor: buttonColor,
                   ),
-                  // ignore: unrelated_type_equality_checks
                   child: const Text(
                    
                     'Sign Up',
