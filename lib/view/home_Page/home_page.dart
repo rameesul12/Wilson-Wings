@@ -20,14 +20,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         //   backgroundColor: ,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(
-              Icons.arrow_back_ios,
-              color: textwhite,
-            )),
+        
         title: const Text(
           "Home Page",
           style: TextStyle(color: textBlack, fontWeight: FontWeight.bold),

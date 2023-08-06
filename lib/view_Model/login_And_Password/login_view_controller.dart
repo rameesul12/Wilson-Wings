@@ -26,7 +26,7 @@ class LoginController extends GetxController{
     password: password,
   );
   isLoading=true.obs;
-  Get.to(()=>const HomePage());
+  Get.offAll(()=>const HomePage());
   
 } on FirebaseAuthException catch (e) {
   isLoading=false.obs;
